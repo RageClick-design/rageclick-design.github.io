@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Personal portfolio of Ali Alizade, also known as RageClick-design.">
   <title>RageClick-design | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -41,8 +41,72 @@
       </div>
       <div class="profile-frame">
         <div class="profile-glow"></div>
-        <img src="Ali Alizade.jpeg" alt="Portrait of Ali Alizade" class="profile-image">
+        <img src="assets/images/Ali%20Alizade.jpeg" alt="Portrait of Ali Alizade" class="profile-image">
         <p class="profile-label">ALI ALIZADE</p>
+      </div>
+    </section>
+
+    <section class="logic-lab container" aria-labelledby="logic-lab-title">
+      <div class="lab-intro">
+        <div>
+          <p class="eyebrow">Interactive playground</p>
+          <h2 id="logic-lab-title">Light up the<br><em>logic lab.</em></h2>
+          <p class="lab-description">Flip the two input lamps and watch the gates decide what happens. Can you solve the challenge?</p>
+        </div>
+        <div class="challenge-card" aria-live="polite">
+          <div class="challenge-topline"><span class="challenge-icon">✦</span><span>Mission</span><span class="streak-badge" data-streak>0 streak</span></div>
+          <p class="challenge-text" data-challenge>Turn on both lamps to light the AND gate.</p>
+          <button class="challenge-button" type="button" data-new-challenge>New challenge <span>↗</span></button>
+        </div>
+      </div>
+
+      <div class="lab-console">
+        <div class="lamp-controls" aria-label="Lamp controls">
+          <div class="control-heading"><span>Inputs</span><span class="live-dot">LIVE</span></div>
+          <button class="lamp-switch lamp-a" type="button" data-lamp="a" aria-pressed="false">
+            <span class="lamp-orb" aria-hidden="true"></span><span class="lamp-copy"><strong>Lamp A</strong><small>Input 1</small></span><span class="switch-state">OFF</span>
+          </button>
+          <button class="lamp-switch lamp-b" type="button" data-lamp="b" aria-pressed="false">
+            <span class="lamp-orb" aria-hidden="true"></span><span class="lamp-copy"><strong>Lamp B</strong><small>Input 2</small></span><span class="switch-state">OFF</span>
+          </button>
+          <button class="reset-lab" type="button" data-reset-lab>Reset lamps</button>
+        </div>
+
+        <div class="gate-board" aria-label="Logic gate outputs">
+          <article class="gate-card gate-and" data-gate="and">
+            <div class="gate-card-head"><span class="gate-symbol">&amp;&amp;</span><div><h3>AND</h3><p>Both lamps required</p></div><span class="gate-status">OFF</span></div>
+            <div class="gate-visual"><span class="wire"></span><span class="output-lamp"></span></div>
+            <p class="gate-result" data-result>Needs A + B</p>
+          </article>
+          <article class="gate-card gate-or" data-gate="or">
+            <div class="gate-card-head"><span class="gate-symbol">≥1</span><div><h3>OR</h3><p>At least one lamp</p></div><span class="gate-status">OFF</span></div>
+            <div class="gate-visual"><span class="wire"></span><span class="output-lamp"></span></div>
+            <p class="gate-result" data-result>Waiting for a signal</p>
+          </article>
+          <article class="gate-card gate-xor" data-gate="xor">
+            <div class="gate-card-head"><span class="gate-symbol">⊕</span><div><h3>XOR</h3><p>Exactly one lamp</p></div><span class="gate-status">OFF</span></div>
+            <div class="gate-visual"><span class="wire"></span><span class="output-lamp"></span></div>
+            <p class="gate-result" data-result>Choose one lamp</p>
+          </article>
+          <article class="gate-card gate-not" data-gate="not">
+            <div class="gate-card-head"><span class="gate-symbol">!</span><div><h3>NOT</h3><p>Flips Lamp A's signal</p></div><span class="gate-status">ON</span></div>
+            <div class="gate-visual"><span class="wire"></span><span class="output-lamp"></span></div>
+            <p class="gate-result" data-result>Inverse of Lamp A</p>
+          </article>
+        </div>
+      </div>
+      <p class="lab-tip"><span>Tip</span> Try every combination — there are only four. Logic becomes clearer when you can see it.</p>
+    </section>
+
+    <section class="fact-section container" aria-labelledby="fact-title">
+      <div class="fact-card">
+        <div class="fact-art" aria-hidden="true"><span class="fact-spark spark-one">✦</span><span class="fact-spark spark-two">✧</span><span class="fact-orb">?</span></div>
+        <div class="fact-content">
+          <div class="fact-heading"><p class="eyebrow">Tiny dose of wonder</p><span class="fact-counter" data-fact-counter>01 / 05</span></div>
+          <h2 id="fact-title">Fun fact <em>of the day.</em></h2>
+          <p class="fact-text" data-fact-text></p>
+          <button class="fact-button" type="button" data-next-fact>Show me another <span>↗</span></button>
+        </div>
       </div>
     </section>
 
